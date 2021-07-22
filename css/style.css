@@ -1,0 +1,210 @@
+body {
+  color: white;
+  text-align: center;
+  /* margin: auto; */
+}
+.center {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+img {
+  width: 40px;
+  height: 40px;
+}
+.title img {
+  width: 700px;
+  height: 170px;
+}
+
+table {
+  display: inline-flex;
+}
+
+.btn {
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 0 10px 0 #000000bf;
+  cursor: pointer;
+  font-size: 23px;
+  font-weight: 700;
+  margin: 15px;
+  padding: 15px 25px;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  box-shadow: 0 20px 32px 0 rgba(0, 0, 0, 0.24),
+    0 20px 32px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btn-undo {
+  padding: 5px 12px;
+  font-size: 15px;
+}
+
+.btn-beginner {
+  background: linear-gradient(to top left, #1233ec, #8c9cf7);
+}
+
+.btn-medium {
+  background: linear-gradient(to top left, #f743fd, #1233ec);
+}
+
+.btn-expert {
+  background: linear-gradient(to top left, #f7a4fa, #f743fd);
+}
+
+.btn-manually,
+.btn-rules {
+  font-size: 15px;
+  margin: 5px;
+  padding: 5px 12px;
+  background: linear-gradient(to top left, #f743fd, #1233ec);
+}
+
+.board td {
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.board td:hover {
+  box-shadow: 0 20px 32px 0 rgba(0, 0, 0, 0.24),
+    0 20px 32px 0 rgba(0, 0, 0, 0.19);
+}
+
+.revealed {
+  background: linear-gradient(to top left, #f743fd, #f1b9f3);
+}
+
+.unrevealed {
+  background: linear-gradient(to top left, #1233ec, #f743fd);
+}
+
+.hints {
+  cursor: pointer;
+  transition: all 0.1s;
+  display: inline-table;
+  font-size: 35px;
+  padding-right: 40px;
+}
+
+.safeClick {
+  cursor: pointer;
+  transition: all 0.1s;
+  display: inline-table;
+  font-size: 35px;
+  padding-left: 40px;
+}
+
+.score-box {
+  position: absolute;
+  font-size: xxx-large;
+  border: 6px solid rgb(255, 59, 239);
+  color: #fff;
+  text-shadow: 0 0 7px rgb(0, 6, 90), 0 0 10px rgb(255, 59, 239),
+    0 0 21px rgb(255, 59, 239), 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa,
+    0 0 102px #0fa, 0 0 151px #0fa;
+
+  width: 98%;
+  height: 260px;
+  margin: auto;
+  bottom: 45px;
+  left: 0;
+  right: 0;
+}
+
+.Beginner,
+.Medium,
+.Expert,
+.Manual {
+  font-size: x-large;
+}
+
+.touchMine {
+  background: linear-gradient(
+    to top left,
+    rgb(211, 86, 86),
+    rgb(216, 129, 129)
+  );
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  background-color: white;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  color: black;
+}
+
+.hidden {
+  display: none;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+p {
+  font-size: larger;
+}
+.small-title {
+  font-size: xxx-large;
+}
+.beginner-level {
+  color: #30d838;
+}
+.medium-level {
+  color: #dfdd67;
+}
+.expert-level {
+  color: #ff4141;
+}
+
+footer {
+  background: linear-gradient(to top left, #f743fd, #1233ec);
+  color: rgb(255, 255, 255);
+  padding: 5px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 30px;
+  width: 100%;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mine-sweeper</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body onload="initGame()">
+    <div class="bgvideo">
+      <video autoplay muted loop class="video">
+        <source src="img/bgvideo.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="center">
+      <div>
+        <button class="btn btn-manually" onclick="manuallyPosMines(this)">
+          Manual board
+        </button>
+        <button class="btn btn-rules" onclick="openModal()">Rules</button>
+      </div>
+      <div class="modal hidden" onclick="closeModal(this)">
+        <button class="close-modal">&times;</button>
+        <h1>Rules</h1>
+        <p>
+          The goal is to reveal only the cells without a mine in the field and
+          put flags on all of the mines.
+        </p>
+        <p class="small-title">You start the game with:</p>
+        <p>💚 3 Lives (Beginner field don't get any lives)</p>
+        <p>💡 3 Hints (Not at the first click on field)</p>
+        <p>🔓 3 Safe-clicks (Not at the first click on field)</p>
+        <p class="small-title">
+          The game divided for 3 levels for your choice:
+        </p>
+        <p class="beginner-level">Beginner : 4X4 board with 2 mines.</p>
+        <p class="medium-level">Medium : 8X8 board with 12 mines.</p>
+        <p class="expert-level">Expert : 12X12 board with 30 mines.</p>
+        <p>
+          By push the 'Manual board' you can choose the cells for the mines.
+        </p>
+        <p>
+          *To restart the game you can just easily push on the Emoji or by push
+          on a level button*
+        </p>
+        <p>
+          Try to break the all time records.(and DON'T forget to have fun😎)
+        </p>
+        <p class="small-title">-See you on the field-</p>
+      </div>
+      <div class="overlay hidden"></div>
+      <div class="title">
+        <img src="img/logo2.png" />
+      </div>
+      <a class="lives"></a>
+      <a class="smiley" onclick="initGame()">😃</a>
+      <button class="btn btn-undo" onclick="getUndo()">undo</button>
+      <div>
+        <a class="hints" onclick="getHint(this)"></a>
+        <table class="board-table">
+          <tbody class="board"></tbody>
+        </table>
+        <a class="safeClick" onclick="getSafeClick(this)"></a>
+        <h3 class="timer">Timer: <span>0.000</span></h3>
+        <div class="levels">
+          <button class="btn btn-beginner" onclick="boardLevel('Beginner')">
+            Beginner
+          </button>
+          <button class="btn btn-medium" onclick="boardLevel('Medium')">
+            Medium
+          </button>
+          <button class="btn btn-expert" onclick="boardLevel('Expert')">
+            Expert
+          </button>
+        </div>
+      </div>
+      <div class="score-box">
+        Best score
+        <p class="Beginner">Best time for beginner: <span></span>secs</p>
+        <p class="Medium">Best time for medium: <span></span>secs</p>
+        <p class="Expert">Best time for expert: <span></span>secs</p>
+      </div>
+    </div>
+    <footer>Ron Buchris</footer>
+    <script src="js/util.js"></script>
+    <script src="js/game.js"></script>
+  </body>
+</html>
